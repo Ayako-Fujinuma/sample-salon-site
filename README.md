@@ -102,7 +102,7 @@ npm run deploy
 
 ## 差し替えが必要な箇所
 
-- `public/images/` 内の画像(現在は仮画像) → 実店舗の写真(詳細は [`public/images/README.md`](public/images/README.md)。Geminiへのプロンプト例つき)
+- `public/images/` 内の画像はGemini生成のサンプル写真に差し替え済み。実店舗で使う際は実際の写真に差し替え(詳細・注意点は [`public/images/README.md`](public/images/README.md))
 - `public/index.html` のアクセス情報(住所・最寄駅・電話番号)、Googleマップの座標
 - `public/index.html` のSNSリンク(Instagram / X のダミーURL)
 - 各ページの「ご予約はこちら」ボタンのダミーURL(`https://beauty.hotpepper.jp/example/`) → 実店舗の予約ページ
