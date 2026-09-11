@@ -120,10 +120,13 @@ img {
 @media (min-width: 900px) {
   .s2-hero-image {
     order: 0;
+    flex: 1.4;
   }
 
   .s2-hero-text {
-    padding: 60px 24px;
+    flex: 1;
+    justify-content: center;
+    padding: 60px 40px 60px 24px;
   }
 }
 

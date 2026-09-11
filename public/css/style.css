@@ -137,7 +137,67 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(53, 39, 47, 0.48);
+  background: linear-gradient(100deg, rgba(53, 39, 47, 0.72) 0%, rgba(53, 39, 47, 0.5) 32%, rgba(53, 39, 47, 0.1) 60%, rgba(53, 39, 47, 0) 100%);
+}
+
+.hero-photo-mobile {
+  display: none;
+}
+
+/* スマホ幅では横に並べる余白がないため、顔に文字が被らないよう写真(上)とテキスト(下)を分ける */
+@media (max-width: 719px) {
+  .hero {
+    display: block;
+    min-height: 0;
+    padding-top: 0;
+    background-image: none;
+    color: var(--text);
+  }
+
+  /* お知らせバナーが非表示の場合のみ、固定ヘッダー分の余白をヒーロー側で確保する */
+  .notice-banner[hidden] + main .hero {
+    padding-top: var(--top-offset);
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-photo-mobile {
+    display: block;
+    width: 100%;
+    height: 48vh;
+    min-height: 280px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .hero-inner {
+    max-width: none;
+    padding: 28px 20px 36px;
+  }
+
+  .hero-eyebrow,
+  .hero-catch,
+  .hero-lead {
+    opacity: 1;
+  }
+
+  .hero-eyebrow {
+    color: var(--accent-dark);
+  }
+
+  .hero-catch {
+    color: var(--text);
+  }
+
+  .hero-lead {
+    color: var(--text-sub);
+  }
+
+  .hero .hero-subaction {
+    color: var(--accent-dark);
+  }
 }
 
 .hero-inner {
@@ -146,7 +206,10 @@ section {
   padding-top: 40px;
   padding-bottom: 40px;
   width: 100%;
-  text-align: center;
+  max-width: 560px;
+  margin-right: auto;
+  margin-left: 0;
+  text-align: left;
 }
 
 .hero-eyebrow {
@@ -166,7 +229,7 @@ section {
 
 .hero-catch {
   font-size: clamp(1.1rem, 3.2vw, 1.5rem);
-  margin: 0 auto 16px;
+  margin: 0 0 16px;
   font-weight: 500;
   opacity: 0.95;
 }
@@ -174,7 +237,7 @@ section {
 .hero-lead {
   font-size: clamp(0.92rem, 2.2vw, 1.02rem);
   max-width: 30em;
-  margin: 0 auto 28px;
+  margin: 0 0 28px;
   opacity: 0.88;
 }
 
@@ -182,7 +245,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 10px 22px;
 }
 
