@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>お問い合わせ・ご予約 | 美容室 いろどり坂(サンプルサイト)</title>
+<title>お問い合わせ | 美容室 いろどり坂(サンプルサイト)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,9 +43,14 @@
   <section class="section section-first" id="contact">
     <div class="container">
       <div class="section-head">
-        <h1>お問い合わせ・ご予約</h1>
+        <h1>お問い合わせ</h1>
       </div>
-      <p class="section-lead">ご予約のご相談やご質問など、お気軽にお問い合わせください。</p>
+      <p class="section-lead">ご予約は下記の予約サイトより承っております。ご不明点やご相談は、こちらのフォームからお気軽にお問い合わせください。</p>
+
+      <p style="text-align:center;margin:0 0 32px;">
+        <!-- ダミーURL：実際にはホットペッパービューティー等の予約ページに差し替えてください -->
+        <a class="btn" href="https://beauty.hotpepper.jp/example/" target="_blank" rel="noopener noreferrer">ご予約はこちら(WEB予約)</a>
+      </p>
 
       <!-- サンプル用のフォームです。見た目の確認用で、実際の送信機能はありません -->
       <form class="contact-form" onsubmit="event.preventDefault();">
@@ -59,7 +64,7 @@
           <input type="email" id="cf-email" name="email" autocomplete="email">
         </div>
         <div class="form-row">
-          <label for="cf-message">お問い合わせ内容(ご希望メニュー・ご希望日時など)</label>
+          <label for="cf-message">お問い合わせ内容</label>
           <textarea id="cf-message" name="message" rows="5"></textarea>
         </div>
         <button type="submit" class="btn">送信する</button>
