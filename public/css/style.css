@@ -129,7 +129,7 @@ section {
   align-items: center;
   background-image: url("../images/hero-bg.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   color: #fff;
 }
 

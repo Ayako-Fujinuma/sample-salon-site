@@ -108,6 +108,9 @@ img {
   flex: 1;
   padding: 0 24px 32px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .s4-hero-image {
@@ -129,8 +132,7 @@ img {
   }
 
   .s4-hero-text {
-    text-align: left;
-    padding: 0 0 0 24px;
+    padding: 0 24px;
   }
 }
 

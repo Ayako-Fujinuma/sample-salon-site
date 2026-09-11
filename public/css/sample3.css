@@ -94,7 +94,7 @@ img {
   justify-content: center;
   padding-top: calc(var(--samples-bar-h) + var(--header-h));
   background-size: cover;
-  background-position: center;
+  background-position: center top;
 }
 
 .s3-hero-overlay {

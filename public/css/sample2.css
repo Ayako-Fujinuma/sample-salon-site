@@ -176,7 +176,7 @@ img {
   flex: 1;
   min-height: 320px;
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   cursor: zoom-in;
 }
 
