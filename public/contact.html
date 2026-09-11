@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ・ご予約 | 美容室 いろどり坂(サンプルサイト)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/samples.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ※このサイトは架空店舗の営業用サンプル(ポートフォリオ)です -->
+<div class="samples-bar">
+  <p class="disclaimer">ポートフォリオ用サンプルサイトです(架空店舗)</p>
+  <nav class="tabs" aria-label="デザイン案の切り替え">
+    <a href="index.html" class="is-active">サンプル1</a>
+    <a href="sample2.html">サンプル2</a>
+    <a href="sample3.html">サンプル3</a>
+    <a href="sample4.html">サンプル4</a>
+  </nav>
+</div>
+<script src="js/samples-bar.js"></script>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">美容室 いろどり坂</a>
+    <nav class="header-nav" aria-label="サイト内リンク">
+      <a href="index.html#concept">コンセプト</a>
+      <a href="index.html#menu">メニュー</a>
+      <a href="index.html#staff">スタッフ</a>
+      <a href="index.html#access">アクセス</a>
+      <a href="index.html#hours">営業時間</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section section-first" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h1>お問い合わせ・ご予約</h1>
+      </div>
+      <p class="section-lead">ご予約のご相談やご質問など、お気軽にお問い合わせください。</p>
+
+      <!-- サンプル用のフォームです。見た目の確認用で、実際の送信機能はありません -->
+      <form class="contact-form" onsubmit="event.preventDefault();">
+        <p class="form-hint form-hint-top">※このサンプルでは送信されません</p>
+        <div class="form-row">
+          <label for="cf-name">お名前</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cf-email">メールアドレス</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="cf-message">お問い合わせ内容(ご希望メニュー・ご希望日時など)</label>
+          <textarea id="cf-message" name="message" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn">送信する</button>
+      </form>
+
+      <p style="text-align:center;margin-top:32px;">
+        <a class="text-link" href="index.html">トップページへ戻る</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="brand">美容室 いろどり坂</span>
+    <address>〒153-0061 東京都目黒区中目黒2-4-3(サンプル住所)｜03-1111-2222</address>
+    <p class="copyright">&copy; 2026 美容室 いろどり坂. ポートフォリオ用の架空店舗サンプルです。</p>
+  </div>
+</footer>
+
+</body>
+</html>

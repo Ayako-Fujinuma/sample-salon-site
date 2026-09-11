@@ -1,0 +1,317 @@
+/* Sample4: ポップ・キュート */
+:root {
+  --bg: #fff8fb;
+  --bg-alt: #fdeef5;
+  --text: #3f2f3a;
+  --text-sub: #8c7686;
+  --pink: #ff8fab;
+  --pink-dark: #ef6a90;
+  --mint: #8fe3c9;
+  --line: #f6d9e6;
+  --header-h: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Zen Maru Gothic", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.85;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.s4-wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- ヘッダー ---------- */
+.s4-header {
+  position: fixed;
+  top: var(--samples-bar-h);
+  left: 0;
+  right: 0;
+  min-height: var(--header-h);
+  background: rgba(255, 248, 251, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 3px solid var(--line);
+  z-index: 150;
+}
+
+.s4-header .s4-wrap {
+  min-height: var(--header-h);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 6px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.s4-logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--pink-dark);
+}
+
+.s4-nav {
+  display: flex;
+  gap: 18px;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.s4-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.s4-nav a:hover {
+  background: var(--bg-alt);
+  color: var(--pink-dark);
+}
+
+/* ---------- ヒーロー ---------- */
+.s4-hero {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--samples-bar-h) + var(--header-h) + 24px);
+  padding-bottom: 24px;
+}
+
+@media (min-width: 900px) {
+  .s4-hero {
+    flex-direction: row;
+    align-items: center;
+    min-height: calc(100vh - var(--samples-bar-h) - var(--header-h));
+    padding-bottom: 0;
+  }
+}
+
+.s4-hero-text {
+  flex: 1;
+  padding: 0 24px 32px;
+  text-align: center;
+}
+
+.s4-hero-image {
+  order: -1;
+  flex: 1;
+  min-height: 280px;
+  margin: 0 24px;
+  border-radius: 32px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 12px 0 var(--line);
+}
+
+@media (min-width: 900px) {
+  .s4-hero-image {
+    order: 0;
+    min-height: 380px;
+    margin: 0 24px 0 0;
+  }
+
+  .s4-hero-text {
+    text-align: left;
+    padding: 0 0 0 24px;
+  }
+}
+
+.s4-hero-text h1 {
+  font-size: clamp(2.1rem, 6vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 18px;
+  color: var(--pink-dark);
+}
+
+.s4-lead {
+  font-size: 1.05rem;
+  margin: 0 0 28px;
+}
+
+.s4-btn {
+  display: inline-block;
+  padding: 14px 34px;
+  background: var(--pink);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 999px;
+  box-shadow: 0 5px 0 var(--pink-dark);
+  transition: transform 0.1s ease;
+}
+
+.s4-btn:hover {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 var(--pink-dark);
+}
+
+/* ---------- セクション共通 ---------- */
+.s4-section {
+  padding: 64px 0;
+}
+
+.s4-section-alt {
+  background: var(--bg-alt);
+}
+
+.s4-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+  margin: 0 0 36px;
+}
+
+/* ---------- メニュー ---------- */
+.s4-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (min-width: 700px) {
+  .s4-menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.s4-menu-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 6px 0 var(--line);
+}
+
+.s4-menu-card img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.s4-menu-body {
+  padding: 14px 10px 18px;
+}
+
+.s4-menu-body h3 {
+  margin: 0 0 4px;
+  font-size: 0.95rem;
+}
+
+.s4-menu-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--pink-dark);
+}
+
+/* ---------- アクセス ---------- */
+.s4-two-col {
+  display: grid;
+  gap: 28px;
+}
+
+@media (min-width: 860px) {
+  .s4-two-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.s4-def dt {
+  font-size: 0.8rem;
+  color: var(--pink-dark);
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.s4-def dt:first-child {
+  margin-top: 0;
+}
+
+.s4-def dd {
+  margin: 4px 0 0;
+  font-size: 0.98rem;
+}
+
+.s4-def-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 24px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.s4-def-row dt {
+  margin-top: 0;
+}
+
+.s4-map {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 0 var(--line);
+}
+
+.s4-map iframe {
+  width: 100%;
+  height: 280px;
+  border: 0;
+}
+
+.s4-notice {
+  margin: 28px auto 0;
+  max-width: 420px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: #fff;
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  text-align: center;
+  box-shadow: 0 4px 0 var(--line);
+  cursor: help;
+}
+
+.s4-lead-sub {
+  text-align: center;
+  margin: 0 auto 28px;
+  max-width: 32em;
+}
+
+.s4-section > .s4-wrap > .s4-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* ---------- フッター ---------- */
+.s4-footer {
+  padding: 32px 0;
+  font-size: 0.8rem;
+  color: var(--text-sub);
+  text-align: center;
+  border-top: 3px solid var(--line);
+}
+
+.s4-footer p {
+  margin: 0 0 6px;
+}

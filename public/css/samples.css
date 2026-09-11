@@ -1,0 +1,56 @@
+/* 全デザイン案(サンプル1〜4)に共通の、最上部の案内バー+切り替えタブ */
+:root {
+  --samples-bar-h: 76px;
+}
+
+.samples-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background: #241a1c;
+  color: #f7ede9;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+.samples-bar .disclaimer {
+  margin: 0;
+  text-align: center;
+  padding: 6px 12px;
+  font-size: 0.72rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.samples-bar .tabs {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.samples-bar .tabs a {
+  flex: 0 0 auto;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  color: #f7ede9;
+  text-decoration: none;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.samples-bar .tabs a:hover {
+  border-color: #f7ede9;
+}
+
+.samples-bar .tabs a.is-active {
+  background: #f7ede9;
+  color: #241a1c;
+  font-weight: 700;
+  border-color: #f7ede9;
+}

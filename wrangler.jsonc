@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Cloudflare Workers name(デプロイ先のプロジェクト名)。使い回す場合は業種ごとに変更してください。
+  "name": "sample-salon-site",
+  "compatibility_date": "2026-09-11",
+  // Workers Static Assets: public/ 以下をそのまま配信します(Pages Functions等は使いません)
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sample-salon-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "個人経営美容室向け営業用サンプルサイト(架空店舗・ポートフォリオ用)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.129.0"
+  }
+}
