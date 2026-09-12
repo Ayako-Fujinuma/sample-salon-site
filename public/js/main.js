@@ -1,5 +1,6 @@
 (() => {
   const NOTICE_TOOLTIP = "サンプル:実際の運用ではGoogleスプレッドシートを編集するだけで更新できます";
+  const NOTICE_ALERT = "サンプル：実際の運用では、Googleスプレッドシートを編集するだけでこのお知らせが自動的に更新されます(コード編集・再デプロイ不要)。";
 
   // ヘッダー(ロゴ+ナビ)の実際の高さを --header-h に反映する。
   // 画面幅によってナビが折り返しても、ヒーローやお知らせバナーがヘッダーと重ならないようにするため。
@@ -106,11 +107,13 @@
         const bannerItem = document.createElement("li");
         bannerItem.innerHTML = `<span class="notice-date">${notice.date ?? ""}</span>${notice.message}`;
         bannerItem.title = NOTICE_TOOLTIP;
+        bannerItem.onclick = () => alert(NOTICE_ALERT);
         bannerList.appendChild(bannerItem);
 
         const hoursItem = document.createElement("li");
         hoursItem.textContent = notice.date ? `${notice.date}:${notice.message}` : notice.message;
         hoursItem.title = NOTICE_TOOLTIP;
+        hoursItem.onclick = () => alert(NOTICE_ALERT);
         hoursNoticeList.appendChild(hoursItem);
       });
 
