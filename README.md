@@ -1,5 +1,7 @@
 # 美容室 いろどり坂（サンプルサイト）
 
+公開URL: https://sample-salon.hirakuhp.com/
+
 個人経営の美容室を想定した、**営業用サンプル(ポートフォリオ)サイト**です。
 実在の店舗ではなく架空の店舗として作成しています。プレーンな HTML / CSS / JS のみで構成し、Cloudflare Workers(Static Assets)にそのままデプロイできます。
 
@@ -96,9 +98,7 @@ npx wrangler login
 npm run deploy
 ```
 
-デプロイが完了すると、`https://sample-salon-site.<あなたのサブドメイン>.workers.dev` のようなURLが発行されます。
-
-独自ドメインを割り当てたい場合は、Cloudflareダッシュボードの当該Workerの「Triggers」→「Custom Domains」から設定してください。
+`wrangler.jsonc` の `routes` でカスタムドメイン(`sample-salon.hirakuhp.com`)を設定しているため、デプロイすると自動的にこのドメインへ反映されます(DNS・証明書もCloudflareが自動で用意)。`routes` を削除すれば、代わりに `https://sample-salon-site.<あなたのサブドメイン>.workers.dev` が有効になります。
 
 ## 差し替えが必要な箇所
 

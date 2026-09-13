@@ -7,5 +7,9 @@
   "assets": {
     "directory": "./public",
     "not_found_handling": "404-page"
-  }
+  },
+  // カスタムドメイン。DNS・証明書はデプロイ時にCloudflareが自動で用意します
+  "routes": [
+    { "pattern": "sample-salon.hirakuhp.com", "custom_domain": true }
+  ]
 }
